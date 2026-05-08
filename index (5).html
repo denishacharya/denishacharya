@@ -1,0 +1,3154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Denish Acharya — International Freight & Logistics</title>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="AvBt_YIwd3i83rJBXNy8ZVlLu--GFw_C1PhlJ1NMUXY" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Denish Acharya — International Freight & Logistics Professional at Team Global Logistics Pvt Ltd, Kathmandu. 500+ containers, 200+ ocean shipments, air & project cargo across Asia.">
+  <link rel="icon" href="icon1.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --bg2: #f7f6f3;
+      --bg3: #f0ede8;
+      --surface: #fafaf8;
+      --card: #ffffff;
+      --border: rgba(0, 0, 0, 0.08);
+      --border2: rgba(0, 0, 0, 0.05);
+      --blue: #1970e9;
+      --blue-dim: rgba(59, 125, 216, 0.08);
+      --blue-line: rgba(59, 125, 216, 0.3);
+      --ink: #1a1a1a;
+      --ink2: #3d3d3d;
+      --muted: #7a7a7a;
+      --soft: #a0a0a0;
+      --shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
+      --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    @media(max-width:768px) {
+      body {
+        cursor: auto;
+      }
+    }
+
+    /* ── CURSOR ── */
+    .cursor {
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width .2s, height .2s;
+    }
+
+    .cursor-ring {
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--blue-line);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: width .3s, height .3s;
+    }
+
+    @media(max-width:768px) {
+
+      .cursor,
+      .cursor-ring {
+        display: none;
+      }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 64px;
+      transition: all .4s;
+    }
+
+    nav.scrolled {
+      padding: 15px 64px;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      font-size: .68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: var(--blue);
+      color: #fff;
+      padding: 9px 22px;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 2px;
+      transition: background .3s, transform .2s;
+    }
+
+    .nav-cta:hover {
+      background: #2b6dc5;
+      transform: translateY(-1px);
+    }
+
+    .mob-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--ink);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .mob-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 200;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+
+    .mob-menu.open {
+      display: flex;
+    }
+
+    .mob-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    .mob-menu a:hover {
+      color: var(--blue);
+    }
+
+    .mob-close {
+      position: absolute;
+      top: 28px;
+      right: 36px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media(max-width:768px) {
+      nav {
+        padding: 18px 24px;
+      }
+
+      nav.scrolled {
+        padding: 13px 24px;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .mob-btn {
+        display: block;
+      }
+    }
+
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 64px 90px;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 35%, rgba(59, 125, 216, .06), transparent 70%),
+        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(59, 125, 216, .04), transparent 60%);
+    }
+
+    /* Subtle dot grid */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0, 0, 0, .1) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+      opacity: .4;
+    }
+
+    /* Animated lines */
+    .rl {
+      position: absolute;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue-line), transparent);
+      opacity: 0;
+      animation: rf 8s ease-in-out infinite;
+    }
+
+    .rl:nth-child(1) {
+      top: 28%;
+      width: 40%;
+      left: 35%;
+      animation-delay: 0s;
+    }
+
+    .rl:nth-child(2) {
+      top: 46%;
+      width: 26%;
+      left: 54%;
+      animation-delay: 2.5s;
+    }
+
+    .rl:nth-child(3) {
+      top: 65%;
+      width: 32%;
+      left: 24%;
+      animation-delay: 5s;
+    }
+
+    @keyframes rf {
+
+      0%,
+      100% {
+        opacity: 0;
+        transform: translateX(-12px);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem;
+      color: var(--blue);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fu .8s .3s ease forwards;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 10vw, 9rem);
+      font-weight: 400;
+      line-height: .9;
+      color: var(--ink);
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fu .8s .5s ease forwards;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    .hero-desc {
+      max-width: 500px;
+      font-size: .97rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 44px;
+      opacity: 0;
+      animation: fu .8s .7s ease forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fu .8s .9s ease forwards;
+    }
+
+    .btn-p {
+      display: inline-block;
+      padding: 13px 34px;
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
+      font-size: .72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 2px;
+      transition: background .3s, transform .2s;
+      border: none;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .btn-p:hover {
+      background: #2b6dc5;
+      transform: translateY(-2px);
+    }
+
+    .btn-g {
+      display: inline-block;
+      padding: 13px 34px;
+      border: 1px solid var(--border);
+      color: var(--ink2);
+      text-decoration: none;
+      font-size: .72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      border-radius: 2px;
+      transition: border-color .3s, color .3s, background .3s;
+    }
+
+    .btn-g:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--blue-dim);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      right: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: fu .8s 1.2s ease forwards;
+    }
+
+    .hero-scroll span {
+      font-size: .6rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--soft);
+      writing-mode: vertical-rl;
+    }
+
+    .sline {
+      width: 1px;
+      height: 52px;
+      background: linear-gradient(to bottom, var(--blue-line), transparent);
+      animation: sp 2.2s ease-in-out infinite;
+    }
+
+    @keyframes sp {
+
+      0%,
+      100% {
+        opacity: .4;
+        transform: scaleY(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scaleY(.5);
+      }
+    }
+
+    .hero-photo {
+      position: absolute;
+      right: 64px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      opacity: 0;
+      animation: fi 1s .55s ease forwards;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+      filter: contrast(1.04);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .hero-photo::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border: 1px solid var(--blue-line);
+      transform: translate(10px, 10px);
+      z-index: -1;
+      border-radius: 2px;
+    }
+
+    @media(max-width:900px) {
+      #home {
+        padding: 110px 24px 64px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero-photo,
+      .hero-scroll {
+        display: none;
+      }
+
+      .hero-desc {
+        max-width: 100%;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+    }
+
+    /* ── STATS BAND ── */
+    .stats-band {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--bg2);
+    }
+
+    .si {
+      padding: 40px 28px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .si:last-child {
+      border-right: none;
+    }
+
+    .sn {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--blue);
+      line-height: 1;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .sl {
+      font-size: .66rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @media(max-width:768px) {
+      .stats-band {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .si:nth-child(2) {
+        border-right: none;
+      }
+
+      .si {
+        padding: 28px 16px;
+      }
+    }
+
+    /* ── SHARED SECTION STYLES ── */
+    section {
+      padding: 112px 64px;
+    }
+
+    @media(max-width:768px) {
+      section {
+        padding: 72px 24px;
+      }
+    }
+
+    .stag {
+      font-family: 'DM Mono', monospace;
+      font-size: .63rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .stitle {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 56px;
+    }
+
+    .stitle em {
+      font-style: italic;
+      color: var(--blue);
+    }
+
+    /* Divider line */
+    .title-line {
+      width: 48px;
+      height: 2px;
+      background: var(--blue);
+      margin-bottom: 48px;
+      margin-top: -36px;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--bg);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .atext p {
+      font-size: .97rem;
+      color: var(--ink2);
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    .atext p strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .elist {
+      list-style: none;
+    }
+
+    .elist li {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .elist li:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .enum {
+      font-family: 'DM Mono', monospace;
+      font-size: .66rem;
+      color: var(--blue);
+      min-width: 26px;
+      padding-top: 3px;
+    }
+
+    .econt h4 {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .econt p {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media(max-width:900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+    }
+
+    /* ── SERVICES ── */
+    #services {
+      background: var(--bg2);
+    }
+
+    .sgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .scard {
+      background: var(--card);
+      padding: 36px 30px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      position: relative;
+      transition: box-shadow .3s, transform .3s, border-color .3s;
+    }
+
+    .scard:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: var(--blue-line);
+    }
+
+    .scard::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--blue);
+      border-radius: 4px 4px 0 0;
+      transform: scaleX(0);
+      transition: transform .4s ease;
+      transform-origin: left;
+    }
+
+    .scard:hover::after {
+      transform: scaleX(1);
+    }
+
+    .sico {
+      width: 42px;
+      height: 42px;
+      background: var(--blue-dim);
+      border: 1px solid var(--blue-line);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      font-size: 1.1rem;
+      transition: background .3s;
+    }
+
+    .scard:hover .sico {
+      background: rgba(59, 125, 216, .14);
+    }
+
+    .scard h3 {
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .scard p {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .stk {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem;
+      letter-spacing: 2px;
+      color: var(--blue);
+      text-transform: uppercase;
+    }
+
+    @media(max-width:900px) {
+      .sgrid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(min-width:901px) and (max-width:1100px) {
+      .sgrid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ── NUMBERS ── */
+    #numbers {
+      background: var(--bg);
+    }
+
+    .ngrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .ncard {
+      background: var(--bg2);
+      padding: 36px 28px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-align: center;
+      transition: box-shadow .3s, transform .2s;
+    }
+
+    .ncard:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .nbig {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.4rem;
+      font-weight: 400;
+      color: var(--blue);
+      line-height: 1;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .nsub {
+      font-size: .66rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .ndesc {
+      font-size: .82rem;
+      color: var(--ink2);
+      line-height: 1.6;
+    }
+
+    @media(max-width:768px) {
+      .ngrid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ── ROUTES ── */
+    #routes {
+      background: var(--bg3);
+    }
+
+    .cgrid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .ccard {
+      background: var(--card);
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: box-shadow .3s, transform .2s, border-color .3s;
+    }
+
+    .ccard:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+      border-color: var(--blue-line);
+    }
+
+    .cflag {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .cname {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
+
+    .cmodes {
+      font-size: .63rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--blue);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .cdesc {
+      font-size: .8rem;
+      color: var(--ink2);
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .cports {
+      font-size: .7rem;
+      font-family: 'DM Mono', monospace;
+      color: var(--soft);
+      line-height: 1.7;
+    }
+
+    @media(max-width:900px) {
+      .cgrid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:480px) {
+      .cgrid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── PARTNERS ── */
+    #partners {
+      background: var(--bg);
+    }
+
+    .pgrid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    .pblock h3 {
+      font-size: .66rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--blue-dim);
+      font-family: 'DM Mono', monospace;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      padding: 7px 16px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-size: .75rem;
+      color: var(--ink2);
+      letter-spacing: .5px;
+      transition: border-color .3s, color .3s, background .3s;
+    }
+
+    .pill:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--blue-dim);
+    }
+
+    @media(max-width:768px) {
+      .pgrid2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    /* ── CARGO ── */
+    #cargo {
+      background: var(--bg2);
+    }
+
+    .cargo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cargo-cat {
+      background: var(--card);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: box-shadow .3s;
+    }
+
+    .cargo-cat:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .cargo-cat h3 {
+      font-size: .63rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      font-family: 'DM Mono', monospace;
+    }
+
+    .cargo-cat ul {
+      list-style: none;
+    }
+
+    .cargo-cat ul li {
+      font-size: .84rem;
+      color: var(--ink2);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cargo-cat ul li::before {
+      content: '—';
+      color: var(--blue);
+      font-size: .65rem;
+      flex-shrink: 0;
+    }
+
+    @media(max-width:768px) {
+      .cargo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── SKILLS ── */
+    #skills {
+      background: var(--bg);
+    }
+
+    .skills2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+    }
+
+    .sg {
+      margin-bottom: 36px;
+    }
+
+    .sgl {
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sr {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .snm {
+      font-size: .86rem;
+      color: var(--ink2);
+      white-space: nowrap;
+    }
+
+    .sbo {
+      flex: 1;
+      height: 3px;
+      background: var(--border);
+      margin: 0 16px;
+      border-radius: 2px;
+    }
+
+    .sbi {
+      height: 100%;
+      background: linear-gradient(90deg, var(--blue-line), var(--blue));
+      border-radius: 2px;
+      transition: width 1.4s ease;
+    }
+
+    .spc {
+      font-family: 'DM Mono', monospace;
+      font-size: .66rem;
+      color: var(--muted);
+      min-width: 30px;
+      text-align: right;
+    }
+
+    @media(max-width:768px) {
+      .skills2 {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+    }
+
+    /* ── EXPERIENCE ── */
+    #experience {
+      background: var(--bg3);
+    }
+
+    .exp-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 72px;
+    }
+
+    .tle {
+      position: relative;
+      padding-left: 26px;
+      padding-bottom: 44px;
+      border-left: 2px solid var(--blue-dim);
+    }
+
+    .tle:last-child {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+
+    .tle::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--blue);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: -6px;
+      top: 4px;
+      box-shadow: 0 0 0 3px var(--blue-dim);
+    }
+
+    .tldate {
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem;
+      letter-spacing: 2px;
+      color: var(--blue);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .tltitle {
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .tlorg {
+      font-size: .83rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .tlbody {
+      font-size: .83rem;
+      color: var(--ink2);
+      line-height: 1.7;
+    }
+
+    .hcard {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 26px;
+      margin-bottom: 14px;
+      position: relative;
+      transition: border-color .3s, box-shadow .3s;
+    }
+
+    .hcard:hover {
+      border-color: var(--blue-line);
+      box-shadow: var(--shadow);
+    }
+
+    .hcard h4 {
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 7px;
+    }
+
+    .hcard p {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .htag {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem;
+      color: var(--blue);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: var(--blue-dim);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    @media(max-width:900px) {
+      .exp-layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+    }
+
+    /* ── PROJECTS ── */
+    #projects {
+      background: var(--bg);
+    }
+
+    .pj-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .pj-text {
+      background: var(--bg2);
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      position: relative;
+      transition: box-shadow .3s, transform .2s, border-color .3s;
+    }
+
+    .pj-text:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+      border-color: var(--blue-line);
+    }
+
+    .pj-text::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--blue);
+      border-radius: 4px 4px 0 0;
+      transform: scaleX(0);
+      transition: transform .4s;
+      transform-origin: left;
+    }
+
+    .pj-text:hover::before {
+      transform: scaleX(1);
+    }
+
+    .pjn {
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem;
+      color: var(--blue);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .pjt {
+      font-size: .96rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .pjs {
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .it-tag {
+      display: inline-block;
+      margin-top: 12px;
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem;
+      letter-spacing: 2px;
+      color: var(--blue);
+      text-transform: uppercase;
+      background: var(--blue-dim);
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    @media(max-width:900px) {
+      .pj-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(min-width:901px) and (max-width:1100px) {
+      .pj-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--bg2);
+    }
+
+    .clayout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+    }
+
+    .cinfo p {
+      font-size: .97rem;
+      color: var(--ink2);
+      line-height: 1.9;
+      margin-bottom: 36px;
+    }
+
+    .cdet {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink2);
+      font-size: .88rem;
+    }
+
+    .cdet:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    .cico {
+      color: var(--blue);
+      min-width: 18px;
+    }
+
+    .cdet a {
+      color: var(--ink2);
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    .cdet a:hover {
+      color: var(--blue);
+    }
+
+    .fg {
+      margin-bottom: 22px;
+    }
+
+    .fg label {
+      display: block;
+      font-size: .63rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ink2);
+      margin-bottom: 7px;
+      font-family: 'DM Mono', monospace;
+      font-weight: 500;
+    }
+
+    .fg input,
+    .fg textarea,
+    .fg select {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+      padding: 11px 14px;
+      color: #1a1a1a;
+      font-family: 'Jost', sans-serif;
+      font-size: .95rem;
+      font-weight: 400;
+      transition: border-color .3s, box-shadow .3s;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .fg input::placeholder,
+    .fg textarea::placeholder {
+      color: #9a9a9a;
+    }
+
+    .fg select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+
+    .fg select option {
+      color: #1a1a1a;
+      background: #ffffff;
+    }
+
+    .fg input:focus,
+    .fg textarea:focus,
+    .fg select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(25, 112, 233, 0.1);
+    }
+
+    .fg textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .frow {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    /* Validation states */
+    .fg input.invalid,
+    .fg textarea.invalid,
+    .fg select.invalid {
+      border-color: #d9534f;
+      box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.08);
+    }
+
+    .fg input.valid,
+    .fg textarea.valid,
+    .fg select.valid {
+      border-color: rgba(39, 174, 96, 0.5);
+    }
+
+    .ferr {
+      font-size: .7rem;
+      color: #c0392b;
+      margin-top: 5px;
+      min-height: 16px;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: .3px;
+    }
+
+    /* Success & error notice boxes */
+    #formSuccess {
+      padding: 48px 32px;
+      text-align: center;
+      background: #f0faf4;
+      border: 1px solid rgba(39, 174, 96, 0.25);
+      border-radius: 4px;
+    }
+
+    #formErrorBanner {
+      display: none;
+      padding: 14px 18px;
+      background: #fdf3f2;
+      border: 1px solid rgba(192, 57, 43, 0.2);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: .84rem;
+      color: #a93226;
+    }
+
+    #formErrorBanner a {
+      color: #a93226;
+      text-decoration: underline;
+    }
+
+    #submitBtn:disabled {
+      opacity: .6;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .resp-badge {
+      margin-top: 20px;
+      padding: 14px 18px;
+      background: rgba(25, 112, 233, 0.06);
+      border: 1px solid rgba(25, 112, 233, 0.18);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .resp-badge-text {
+      font-size: .8rem;
+      color: var(--ink2);
+      font-weight: 400;
+    }
+
+    .resp-badge-sub {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    @media(max-width:900px) {
+      .clayout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .frow {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      padding: 36px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .flogo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .flogo span {
+      color: #6ba3e8;
+    }
+
+    .fcopy {
+      font-size: .7rem;
+      color: rgba(255, 255, 255, .35);
+      letter-spacing: 1px;
+    }
+
+    .fsoc {
+      display: flex;
+      gap: 22px;
+    }
+
+    .fsoc a {
+      font-size: .68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .4);
+      text-decoration: none;
+      transition: color .3s;
+    }
+
+    .fsoc a:hover {
+      color: #6ba3e8;
+    }
+
+    @media(max-width:768px) {
+      footer {
+        padding: 28px 24px;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fu {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fi {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.v {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .d1 {
+      transition-delay: .1s
+    }
+
+    .d2 {
+      transition-delay: .2s
+    }
+
+    .d3 {
+      transition-delay: .3s
+    }
+
+    .d4 {
+      transition-delay: .4s
+    }
+
+    /* ── GALLERY ── */
+    #gallery {
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    /* Filter bar */
+    .gal-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .gal-btn {
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      font-family: 'DM Mono', monospace;
+      font-size: .63rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all .25s;
+    }
+
+    .gal-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--blue-dim);
+    }
+
+    .gal-btn.active {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+    }
+
+    /* Masonry-style grid */
+    .gal-grid {
+      columns: 3;
+      column-gap: 16px;
+    }
+
+    @media(max-width:900px) {
+      .gal-grid {
+        columns: 2;
+      }
+    }
+
+    @media(max-width:500px) {
+      .gal-grid {
+        columns: 1;
+      }
+    }
+
+    .gal-item {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: var(--bg2);
+    }
+
+    .gal-item.hidden {
+      display: none;
+    }
+
+    /* Photo placeholder — full bleed aspect-ratio box with SVG illustration */
+    .gal-thumb {
+      width: 100%;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gal-thumb svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Overlay */
+    .gal-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26, 26, 26, .88) 0%, rgba(26, 26, 26, .1) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px 18px;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+
+    .gal-item:hover .gal-overlay {
+      opacity: 1;
+    }
+
+    .gal-cat {
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #93bff5;
+      margin-bottom: 4px;
+    }
+
+    .gal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .gal-sub {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .65);
+      line-height: 1.5;
+    }
+
+    /* Below-thumb caption (visible always) */
+    .gal-caption {
+      padding: 14px 16px 16px;
+      background: var(--card);
+    }
+
+    .gal-caption .gal-cat {
+      color: var(--blue);
+    }
+
+    .gal-caption .gal-title {
+      color: var(--ink);
+      font-size: .9rem;
+      margin-bottom: 3px;
+    }
+
+    .gal-caption .gal-sub {
+      color: var(--muted);
+    }
+
+    /* Lightbox */
+    .lb-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      background: rgba(10, 10, 12, .92);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+    }
+
+    .lb-wrap.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lb-box {
+      background: var(--card);
+      border-radius: 6px;
+      max-width: 820px;
+      width: 92vw;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      transform: scale(.96);
+      transition: transform .3s;
+      border: 1px solid var(--border);
+    }
+
+    .lb-wrap.open .lb-box {
+      transform: scale(1);
+    }
+
+    @media(max-width:640px) {
+      .lb-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .lb-visual {
+      background: var(--bg2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      min-height: 300px;
+    }
+
+    .lb-visual svg {
+      max-width: 100%;
+      max-height: 320px;
+    }
+
+    .lb-info {
+      padding: 36px 32px;
+      position: relative;
+    }
+
+    .lb-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color .2s, color .2s;
+    }
+
+    .lb-close:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    .lb-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .lb-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .lb-desc {
+      font-size: .88rem;
+      color: var(--ink2);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .lb-meta {
+      list-style: none;
+    }
+
+    .lb-meta li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .82rem;
+    }
+
+    .lb-meta li:last-child {
+      border-bottom: none;
+    }
+
+    .lb-meta .lm-key {
+      color: var(--muted);
+      min-width: 90px;
+      flex-shrink: 0;
+    }
+
+    .lb-meta .lm-val {
+      color: var(--ink2);
+      font-weight: 400;
+    }
+
+    /* ── QUOTE BAND ── */
+    .quote-band {
+      background: var(--blue);
+      padding: 56px 64px;
+      text-align: center;
+    }
+
+    .quote-band blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      font-style: italic;
+      color: #fff;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .quote-band cite {
+      display: block;
+      margin-top: 16px;
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .6);
+      font-style: normal;
+    }
+
+    @media(max-width:768px) {
+      .quote-band {
+        padding: 44px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cursor" id="cur"></div>
+  <div class="cursor-ring" id="ring"></div>
+
+  <!-- Mobile menu -->
+  <div class="mob-menu" id="mm">
+    <button class="mob-close" onclick="document.getElementById('mm').classList.remove('open')">✕</button>
+    <a href="#home" onclick="document.getElementById('mm').classList.remove('open')">Home</a>
+    <a href="#about" onclick="document.getElementById('mm').classList.remove('open')">About</a>
+    <a href="#services" onclick="document.getElementById('mm').classList.remove('open')">Services</a>
+    <a href="#routes" onclick="document.getElementById('mm').classList.remove('open')">Routes</a>
+    <a href="#partners" onclick="document.getElementById('mm').classList.remove('open')">Partners</a>
+    <a href="#gallery" onclick="document.getElementById('mm').classList.remove('open')">Gallery</a>
+    <a href="#contact" onclick="document.getElementById('mm').classList.remove('open')">Contact</a>
+  </div>
+
+  <nav id="nav">
+    <a href="#home" class="nav-logo">Denish <span>Acharya</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#routes">Routes</a></li>
+      <li><a href="#partners">Partners</a></li>
+      <li><a href="#cargo">Cargo</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <button class="mob-btn" onclick="document.getElementById('mm').classList.add('open')">☰</button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="rl"></div>
+    <div class="rl"></div>
+    <div class="rl"></div>
+    <div class="hero-photo"><img src="denish1.jpeg" alt="Denish Acharya"></div>
+    <div class="hero-eyebrow">Team Global Logistics &nbsp;·&nbsp; Kathmandu, Nepal</div>
+    <h1 class="hero-name">Denish<br><em>Acharya</em></h1>
+    <p class="hero-desc">International freight &amp; logistics professional with 1.5+ years of experience — 500+
+      containers, ocean &amp; air cargo, project cargo, and multi-corridor trade across Asia.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-p">Work With Me</a>
+      <a href="Denish.pdf" target="_blank" class="btn-g">Download CV</a>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <div class="stats-band">
+    <div class="si reveal"><span class="sn">500+</span><span class="sl">Containers Handled</span></div>
+    <div class="si reveal d1"><span class="sn">200+</span><span class="sl">Ocean Shipments</span></div>
+    <div class="si reveal d2"><span class="sn">100+</span><span class="sl">Air Shipments</span></div>
+    <div class="si reveal d3"><span class="sn">9+</span><span class="sl">Countries Covered</span></div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <span class="stag reveal">01 — About</span>
+    <h2 class="stitle reveal">Moving cargo.<br>Building <em>connections.</em></h2>
+    <div class="about-grid">
+      <div class="atext reveal">
+        <p>I'm <strong>Denish Acharya</strong> — an international freight and logistics professional currently working
+          at <strong>Team Global Logistics Pvt Ltd</strong>, Kathmandu. With 1.5+ years of hands-on experience in
+          freight forwarding, I manage ocean and air cargo shipments across Asia's key trade corridors into Nepal.</p>
+        <p>From coordinating <strong>hydropower and solar project cargo</strong> to handling time-critical medical
+          equipment via air freight — I've operated across a wide spectrum of cargo types, shipping lines, and airline
+          partners. I understand what it takes to keep complex supply chains moving reliably.</p>
+        <p>Alongside my logistics career, I hold a <strong>Bachelor of Computer Applications (BCA)</strong> from Citizen
+          College — bringing an analytical, tech-forward approach to every logistics challenge.</p>
+        <div style="margin-top:28px"><a href="Denish.pdf" target="_blank" class="btn-p">Download Resume</a></div>
+      </div>
+      <ul class="elist reveal d1">
+        <li><span class="enum">01</span>
+          <div class="econt">
+            <h4>Ocean & Air Freight Operations</h4>
+            <p>200+ ocean shipments and 100+ air freight shipments handled across major Asian trade routes.</p>
+          </div>
+        </li>
+        <li><span class="enum">02</span>
+          <div class="econt">
+            <h4>Project Cargo Management</h4>
+            <p>Hydropower, solar, and heavy machinery project cargo requiring specialised multi-modal planning and
+              permits.</p>
+          </div>
+        </li>
+        <li><span class="enum">03</span>
+          <div class="econt">
+            <h4>International Forwarder Network</h4>
+            <p>Active relationships with freight forwarders across China, India, Japan, South Korea, Thailand, UAE &
+              more.</p>
+          </div>
+        </li>
+        <li><span class="enum">04</span>
+          <div class="econt">
+            <h4>Import/Export Documentation</h4>
+            <p>End-to-end customs documentation, freight communication, and compliance for all shipment types.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section id="services">
+    <span class="stag reveal">02 — Services</span>
+    <h2 class="stitle reveal">What I <em>handle</em></h2>
+    <div class="sgrid">
+      <div class="scard reveal">
+        <div class="sico">✈</div>
+        <h3>Air Freight</h3>
+        <p>100+ shipments coordinated via Air China, Thai Airways, Singapore Airlines, Korean Air, Cathay Pacific and
+          Nepal Airlines — express and consolidation cargo.</p>
+        <span class="stk">Express · Charter · Consolidation</span>
+      </div>
+      <div class="scard reveal d1">
+        <div class="sico">⚓</div>
+        <h3>Ocean Freight</h3>
+        <p>200+ ocean shipments managed with SITC, Maersk, COSCO, PIL, ONE, WHL, OOCL, CMA CGM and MSC — FCL, LCL, and
+          break bulk.</p>
+        <span class="stk">FCL · LCL · Break Bulk</span>
+      </div>
+      <div class="scard reveal d2">
+        <div class="sico">🚛</div>
+        <h3>Road Freight</h3>
+        <p>Cross-border land freight from China and India — managing transit documentation, border clearance and inland
+          delivery across Nepal.</p>
+        <span class="stk">FTL · LTL · Cross-border</span>
+      </div>
+      <div class="scard reveal d3">
+        <div class="sico">⚙</div>
+        <h3>Project Cargo</h3>
+        <p>Hydropower equipment, solar materials, heavy machinery — oversized and out-of-gauge cargo with dedicated
+          multi-modal logistics solutions.</p>
+        <span class="stk">Heavy Lift · OOG · Multi-modal</span>
+      </div>
+      <div class="scard reveal d4">
+        <div class="sico">📋</div>
+        <h3>Customs & Documentation</h3>
+        <p>Full import/export documentation — bills of lading, certificates of origin, duty calculations and regulatory
+          compliance for Nepal.</p>
+        <span class="stk">Customs · Compliance · Clearance</span>
+      </div>
+      <div class="scard reveal">
+        <div class="sico">🔗</div>
+        <h3>Shipment Tracking & Comms</h3>
+        <p>Proactive cargo tracking, client communication and issue resolution — keeping all stakeholders informed
+          across the full shipment lifecycle.</p>
+        <span class="stk">Tracking · Client Comms · Resolution</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NUMBERS ── -->
+  <section id="numbers">
+    <span class="stag reveal">03 — By the Numbers</span>
+    <h2 class="stitle reveal">Real <em>results</em></h2>
+    <div class="ngrid">
+      <div class="ncard reveal"><span class="nbig">500+</span><span class="nsub">Containers</span>
+        <p class="ndesc">Total containers handled across FCL and LCL ocean freight shipments into Nepal.</p>
+      </div>
+      <div class="ncard reveal d1"><span class="nbig">200+</span><span class="nsub">Ocean Shipments</span>
+        <p class="ndesc">Sea freight shipments coordinated with 8 major global shipping lines.</p>
+      </div>
+      <div class="ncard reveal d2"><span class="nbig">100+</span><span class="nsub">Air Shipments</span>
+        <p class="ndesc">Air cargo movements managed across 6 international airline partners.</p>
+      </div>
+    </div>
+    <div class="ngrid">
+      <div class="ncard reveal"><span class="nbig">8</span><span class="nsub">Shipping Lines</span>
+        <p class="ndesc">SITC, Maersk, COSCO, PIL, ONE, OOCL, CMA CGM & MSC.</p>
+      </div>
+      <div class="ncard reveal d1"><span class="nbig">6</span><span class="nsub">Airline Partners</span>
+        <p class="ndesc">Air China, Thai Airways, Singapore Airlines, Korean Air, Cathay Pacific & Nepal Airlines.</p>
+      </div>
+      <div class="ncard reveal d2"><span class="nbig">9+</span><span class="nsub">Countries</span>
+        <p class="ndesc">China, India, Japan, South Korea, Thailand, UAE, Indonesia, Myanmar & Australia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUOTE BAND ── -->
+  <div class="quote-band reveal">
+    <blockquote>
+      "Logistics is the backbone of global commerce — every container moved is a chain of trust, precision, and
+      commitment."
+      <cite>— Denish Acharya, Team Global Logistics</cite>
+    </blockquote>
+  </div>
+
+  <!-- ── ROUTES ── -->
+  <section id="routes">
+    <span class="stag reveal">04 — Trade Routes</span>
+    <h2 class="stitle reveal">Countries I <em>operate</em> across</h2>
+    <div class="cgrid">
+      <div class="ccard reveal">
+        <span class="cflag">🇨🇳</span>
+        <div class="cname">China</div>
+        <div class="cmodes">Air · Ocean · Road</div>
+        <p class="cdesc">Nepal's largest import source — all freight modes including road via Zhangmu port / Tatopani
+          border.</p>
+        <div class="cports">Guangzhou · Shenzhen · Shanghai · Yiwu · Tianjin · Hong Kong · Beijing · Qingdao</div>
+      </div>
+      <div class="ccard reveal d1">
+        <span class="cflag">🇮🇳</span>
+        <div class="cname">India</div>
+        <div class="cmodes">Air · Road</div>
+        <p class="cdesc">Primary land corridor and ocean transshipment hub for Nepal imports.</p>
+        <div class="cports">Kolkata · Visakhapatnam · Haldia · Gujarat · Delhi · Ahmedabad</div>
+      </div>
+      <div class="ccard reveal d2">
+        <span class="cflag">🇯🇵</span>
+        <div class="cname">Japan</div>
+        <div class="cmodes">Air · Ocean</div>
+        <p class="cdesc">Cosmetics and beauty items from Japan.</p>
+        <div class="cports">Narita (Air)</div>
+      </div>
+      <div class="ccard reveal d3">
+        <span class="cflag">🇰🇷</span>
+        <div class="cname">South Korea</div>
+        <div class="cmodes">Air</div>
+        <p class="cdesc">Cosmetics and beauty products from Korea.</p>
+        <div class="cports">Incheon (Air)</div>
+      </div>
+      <div class="ccard reveal">
+        <span class="cflag">🇹🇭</span>
+        <div class="cname">Thailand</div>
+        <div class="cmodes">Air · Ocean</div>
+        <p class="cdesc">Aluminum articles and parts.</p>
+        <div class="cports">Bangkok · Laem Chabang Port · Lat Krabang ICD</div>
+      </div>
+      <div class="ccard reveal d1">
+        <span class="cflag">🇦🇪</span>
+        <div class="cname">UAE</div>
+        <div class="cmodes">Air · Ocean</div>
+        <p class="cdesc">Chocolates, coffee and other products.</p>
+        <div class="cports">Jebel Ali Port · Dubai</div>
+      </div>
+      <div class="ccard reveal d2">
+        <span class="cflag">🇮🇩</span>
+        <div class="cname">Indonesia</div>
+        <div class="cmodes">Air</div>
+        <p class="cdesc">Cosmetics and personal care products.</p>
+        <div class="cports">Jakarta</div>
+      </div>
+      <div class="ccard reveal d3">
+        <span class="cflag">🌏</span>
+        <div class="cname">+ More</div>
+        <div class="cmodes">Myanmar · Australia</div>
+        <p class="cdesc">Additional routes handled including Yangon and Australia cargo coordination.</p>
+        <div class="cports">Yangon · Australia routes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PARTNERS ── -->
+  <section id="partners">
+    <span class="stag reveal">05 — Partners & Lines</span>
+    <h2 class="stitle reveal">Industry <em>network</em></h2>
+    <div class="pgrid2">
+      <div class="pblock reveal">
+        <h3>Shipping Lines</h3>
+        <div class="pills">
+          <span class="pill">SITC</span>
+          <span class="pill">Maersk</span>
+          <span class="pill">COSCO</span>
+          <span class="pill">PIL</span>
+          <span class="pill">ONE</span>
+          <span class="pill">OOCL</span>
+          <span class="pill">CMA CGM</span>
+          <span class="pill">MSC</span>
+          <span class="pill">WHL</span>
+        </div>
+      </div>
+      <div class="pblock reveal d1">
+        <h3>Airline Partners</h3>
+        <div class="pills">
+          <span class="pill">Air China</span>
+          <span class="pill">Thai Airways</span>
+          <span class="pill">Singapore Airlines (SQ)</span>
+          <span class="pill">Korean Air (KE)</span>
+          <span class="pill">Cathay Pacific (CX)</span>
+          <span class="pill">Nepal Airlines (RA)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CARGO ── -->
+  <section id="cargo">
+    <span class="stag reveal">06 — Cargo Experience</span>
+    <h2 class="stitle reveal">What I've <em>moved</em></h2>
+    <div class="cargo-grid">
+      <div class="cargo-cat reveal">
+        <h3>Industrial & Project</h3>
+        <ul>
+          <li>EV vehicle charging modules</li>
+          <li>Sensors & electronics</li>
+          <li>Heavy machinery</li>
+          <li>Hydropower project cargo</li>
+          <li>Solar power project materials</li>
+          <li>Surgical & medical items</li>
+          <li>Hospitality products</li>
+        </ul>
+      </div>
+      <div class="cargo-cat reveal d1">
+        <h3>Consumer & Retail</h3>
+        <ul>
+          <li>Chocolates & coffee</li>
+          <li>Cosmetics</li>
+          <li>Clothes & fabrics</li>
+          <li>Rexine products</li>
+          <li>Rice crackers</li>
+        </ul>
+      </div>
+      <div class="cargo-cat reveal d2">
+        <h3>Construction & Raw Materials</h3>
+        <ul>
+          <li>Aluminum articles</li>
+          <li>Aluminum foils</li>
+          <li>Fiber clay pots</li>
+          <li>Parqueting materials</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <span class="stag reveal">07 — Skills</span>
+    <h2 class="stitle reveal">Capabilities &amp;<br><em>expertise</em></h2>
+    <div class="skills2">
+      <div>
+        <div class="sg reveal">
+          <div class="sgl">Logistics & Operations</div>
+          <div class="sr"><span class="snm">Ocean Freight</span>
+            <div class="sbo">
+              <div class="sbi" style="width:95%"></div>
+            </div><span class="spc">95%</span>
+          </div>
+          <div class="sr"><span class="snm">Air Freight</span>
+            <div class="sbo">
+              <div class="sbi" style="width:90%"></div>
+            </div><span class="spc">90%</span>
+          </div>
+          <div class="sr"><span class="snm">Project Cargo</span>
+            <div class="sbo">
+              <div class="sbi" style="width:85%"></div>
+            </div><span class="spc">85%</span>
+          </div>
+          <div class="sr"><span class="snm">Customs & Docs</span>
+            <div class="sbo">
+              <div class="sbi" style="width:88%"></div>
+            </div><span class="spc">88%</span>
+          </div>
+          <div class="sr"><span class="snm">Shipment Tracking</span>
+            <div class="sbo">
+              <div class="sbi" style="width:92%"></div>
+            </div><span class="spc">92%</span>
+          </div>
+          <div class="sr"><span class="snm">Forwarder Liaison</span>
+            <div class="sbo">
+              <div class="sbi" style="width:90%"></div>
+            </div><span class="spc">90%</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sg reveal d1">
+          <div class="sgl">Technology & IT</div>
+          <div class="sr"><span class="snm">Web Design</span>
+            <div class="sbo">
+              <div class="sbi" style="width:80%"></div>
+            </div><span class="spc">80%</span>
+          </div>
+          <div class="sr"><span class="snm">C Programming</span>
+            <div class="sbo">
+              <div class="sbi" style="width:75%"></div>
+            </div><span class="spc">75%</span>
+          </div>
+          <div class="sr"><span class="snm">Machine Learning</span>
+            <div class="sbo">
+              <div class="sbi" style="width:70%"></div>
+            </div><span class="spc">70%</span>
+          </div>
+          <div class="sr"><span class="snm">Artificial Intelligence</span>
+            <div class="sbo">
+              <div class="sbi" style="width:78%"></div>
+            </div><span class="spc">78%</span>
+          </div>
+        </div>
+        <div class="sg reveal d2" style="margin-top:28px">
+          <div class="sgl">Core Competencies</div>
+          <div class="pills">
+            <span class="pill">Container Handling</span>
+            <span class="pill">Import/Export Docs</span>
+            <span class="pill">Supply Chain Support</span>
+            <span class="pill">Client Communication</span>
+            <span class="pill">Shipment Planning</span>
+            <span class="pill">Freight Negotiation</span>
+            <span class="pill">International Logistics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
+    <span class="stag reveal">08 — Experience</span>
+    <h2 class="stitle reveal">Career &amp;<br><em>education</em></h2>
+    <div class="exp-layout">
+      <div>
+        <div class="tle reveal">
+          <div class="tldate">2023 – Present</div>
+          <div class="tltitle">Freight & Logistics Operations</div>
+          <div class="tlorg">Team Global Logistics Pvt Ltd · Kathmandu</div>
+          <div class="tlbody">International freight forwarding across ocean, air and project cargo. Coordinating with a
+            global forwarder network across 9+ countries. Managing 500+ containers, 200+ ocean and 100+ air shipments.
+          </div>
+        </div>
+        <div class="tle reveal d1">
+          <div class="tldate">2022 – 2026 (Expected)</div>
+          <div class="tltitle">Bachelor of Computer Applications</div>
+          <div class="tlorg">Citizen College · Kathmandu</div>
+          <div class="tlbody">Final semester. IT systems, software development, ML/AI, database management and web
+            development. College projects in ML and deep learning.</div>
+        </div>
+      </div>
+      <div>
+        <div class="hcard reveal">
+          <span class="htag">Project Cargo</span>
+          <h4>Hydropower & Solar Project Cargo</h4>
+          <p>Managed heavy, oversized and multi-modal project shipments for Nepal's energy sector — hydropower turbines,
+            solar panels and industrial equipment requiring specialist logistics planning.</p>
+        </div>
+        <div class="hcard reveal d1">
+          <span class="htag">Volume</span>
+          <h4>500+ Containers in 1.5 Years</h4>
+          <p>Handled over 500 containers across FCL and LCL modes with 8 global shipping lines — SITC, Maersk, COSCO,
+            PIL, ONE, OOCL, CMA CGM and MSC.</p>
+        </div>
+        <div class="hcard reveal d2">
+          <span class="htag">Multi-corridor</span>
+          <h4>9+ Country Coverage</h4>
+          <p>Active shipment coordination across China, India, Japan, South Korea, Thailand, UAE, Indonesia, Myanmar and
+            Australia — each with distinct regulations and forwarder networks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <span class="stag reveal">09 — Projects</span>
+    <h2 class="stitle reveal">Selected <em>work</em></h2>
+    <div class="pj-grid" style="margin-bottom:20px">
+      <div class="pj-text reveal">
+        <div class="pjn">01 — Shipment Handling</div>
+        <div class="pjt">Operations</div>
+        <p class="pjs">Handled international air and sea shipments from origin to final deliveryt</p>
+      </div>
+      <div class="pj-text reveal d1">
+        <div class="pjn">02 — Solar Project</div>
+        <div class="pjt">20 MW Solar Power Project</div>
+        <p class="pjs">PV Modules / Solar Panels - 715 W and 720 W</p>
+      </div>
+      <div class="pj-text reveal d2">
+        <div class="pjn">03 — HydropowerProject</div>
+        <div class="pjt">97.2 MW Hydropwer Project</div>
+        <p class="pjs">Hydraulic machinery equipment</p>
+      </div>
+    </div>
+    <div class="pj-grid">
+      <div class="pj-text reveal">
+        <div class="pjn">07 — IT Project</div>
+        <div class="pjt">Movie Ticket Booking System</div>
+        <p class="pjs">A full-featured online ticket booking platform — users can browse movies, select seats, and
+          complete bookings. Built as a functional college project backend logic.</p>
+        <span class="it-tag">backend logic · C programming</span>
+      </div>
+      <div class="pj-text reveal d1">
+        <div class="pjn">08 — Deep Learning</div>
+        <div class="pjt">Stock Price Prediction</div>
+        <p class="pjs">Deep learning model to predict stock price movements using historical data. Implemented using
+          neural network architectures — exploring time-series forecasting and financial data analysis.</p>
+        <span class="it-tag">Deep Learning · Python · Neural Networks</span>
+      </div>
+      <div class="pj-text reveal d2">
+        <div class="pjn">09 — Machine Learning</div>
+        <div class="pjt">Hotel Recommendation System</div>
+        <p class="pjs">Machine learning-powered recommendation engine that suggests hotels based on user preferences and
+          behaviour patterns. Built using collaborative filtering and content-based ML techniques.</p>
+        <span class="it-tag">Machine Learning · Python · Recommendation Engine</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ── -->
+  <section id="gallery">
+    <span class="stag reveal">10 — Visual Portfolio</span>
+    <h2 class="stitle reveal">Field work &amp;<br><em>real cargo</em></h2>
+
+
+
+    <!-- Masonry grid -->
+    <div class="gal-grid" id="galGrid">
+
+      <!-- 01 — FCL Container yard -->
+      <div class="gal-item reveal" data-cat="ocean" data-index="0">
+        <div class="gal-thumb">
+          <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="280" fill="#d4e8f8" />
+            <!-- Sky gradient -->
+            <rect width="400" height="160" fill="#b8d9f0" />
+            <!-- Ground -->
+            <rect y="220" width="400" height="60" fill="#c5bfb5" />
+            <!-- Gantry crane -->
+            <rect x="30" y="40" width="8" height="200" fill="#4a7ab5" rx="2" />
+            <rect x="30" y="40" width="280" height="10" fill="#4a7ab5" rx="2" />
+            <rect x="200" y="40" width="8" height="200" fill="#4a7ab5" rx="2" />
+            <rect x="100" y="50" width="6" height="80" fill="#2d5a8c" rx="1" />
+            <!-- Containers stacked -->
+            <rect x="40" y="200" width="80" height="30" fill="#e74c3c" rx="1" />
+            <rect x="42" y="202" width="76" height="26" fill="none" stroke="rgba(0,0,0,.15)" stroke-width="1" />
+            <text x="80" y="219" font-size="8" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">COSCO</text>
+            <rect x="40" y="168" width="80" height="30" fill="#3498db" rx="1" />
+            <text x="80" y="187" font-size="8" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">MAERSK</text>
+            <rect x="40" y="136" width="80" height="30" fill="#e67e22" rx="1" />
+            <text x="80" y="155" font-size="8" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">MSC</text>
+            <rect x="130" y="200" width="80" height="30" fill="#27ae60" rx="1" />
+            <text x="170" y="219" font-size="8" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">ONE</text>
+            <rect x="130" y="168" width="80" height="30" fill="#8e44ad" rx="1" />
+            <text x="170" y="187" font-size="8" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">OOCL</text>
+            <rect x="220" y="200" width="80" height="30" fill="#c0392b" rx="1" />
+            <text x="260" y="219" font-size="8" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">CMA CGM</text>
+            <rect x="220" y="168" width="80" height="30" fill="#2980b9" rx="1" />
+            <text x="260" y="187" font-size="8" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">SITC</text>
+            <!-- Truck -->
+            <rect x="310" y="208" width="60" height="22" fill="#555" rx="2" />
+            <rect x="340" y="205" width="30" height="10" fill="#777" rx="1" />
+            <circle cx="320" cy="232" r="5" fill="#222" />
+            <circle cx="355" cy="232" r="5" fill="#222" />
+            <!-- Water/port edge -->
+            <rect y="240" width="400" height="5" fill="#7bbad4" opacity=".4" />
+          </svg>
+        </div>
+        <div class="gal-overlay">
+          <div class="gal-cat">Ocean Freight</div>
+          <div class="gal-title">Container Yard — Port Operations</div>
+          <div class="gal-sub">FCL stacking with multi-line containers at Chittagong/Kolkata port</div>
+        </div>
+        <div class="gal-caption">
+          <div class="gal-cat">Ocean Freight</div>
+          <div class="gal-title">Container Yard Operations</div>
+          <div class="gal-sub">FCL · 500+ containers across 8 shipping lines</div>
+        </div>
+      </div>
+
+      <!-- 02 — Air cargo terminal (taller card) -->
+      <div class="gal-item reveal d1" data-cat="air" data-index="1">
+        <div class="gal-thumb">
+          <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="340" fill="#e8f0f8" />
+            <!-- Terminal ceiling -->
+            <rect width="400" height="40" fill="#bcd0e8" />
+            <!-- Skylights -->
+            <rect x="40" y="8" width="60" height="24" fill="#d0e8f8" rx="2" />
+            <rect x="160" y="8" width="60" height="24" fill="#d0e8f8" rx="2" />
+            <rect x="280" y="8" width="60" height="24" fill="#d0e8f8" rx="2" />
+            <!-- Floor -->
+            <rect y="300" width="400" height="40" fill="#c8c0b5" />
+            <!-- Floor lines -->
+            <line x1="0" y1="310" x2="400" y2="310" stroke="rgba(255,255,255,.5)" stroke-width="1"
+              stroke-dasharray="20,10" />
+            <!-- Large cargo pallets -->
+            <rect x="20" y="240" width="100" height="60" fill="#8B6914" rx="2" />
+            <rect x="22" y="242" width="96" height="56" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1" />
+            <!-- Cargo net -->
+            <line x1="20" y1="260" x2="120" y2="260" stroke="rgba(255,255,255,.4)" stroke-width="1" />
+            <line x1="20" y1="275" x2="120" y2="275" stroke="rgba(255,255,255,.4)" stroke-width="1" />
+            <line x1="40" y1="240" x2="40" y2="300" stroke="rgba(255,255,255,.4)" stroke-width="1" />
+            <line x1="70" y1="240" x2="70" y2="300" stroke="rgba(255,255,255,.4)" stroke-width="1" />
+            <line x1="100" y1="240" x2="100" y2="300" stroke="rgba(255,255,255,.4)" stroke-width="1" />
+            <text x="70" y="275" font-size="7" fill="rgba(255,255,255,.8)" text-anchor="middle"
+              font-family="monospace">AIR CARGO</text>
+            <rect x="140" y="250" width="80" height="50" fill="#4a90d9" rx="2" />
+            <text x="180" y="280" font-size="7" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">EXPRESS</text>
+            <rect x="140" y="200" width="80" height="48" fill="#e67e22" rx="2" />
+            <text x="180" y="228" font-size="7" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">FRAGILE</text>
+            <rect x="240" y="260" width="70" height="40" fill="#27ae60" rx="2" />
+            <text x="275" y="284" font-size="7" fill="rgba(255,255,255,.85)" text-anchor="middle"
+              font-family="monospace">PHARMA</text>
+            <!-- Forklift -->
+            <rect x="320" y="260" width="50" height="40" fill="#f39c12" rx="2" />
+            <rect x="310" y="270" width="12" height="6" fill="#e67e22" rx="1" />
+            <rect x="310" y="258" width="4" height="18" fill="#cd6f1a" />
+            <circle cx="330" cy="302" r="6" fill="#333" />
+            <circle cx="358" cy="302" r="6" fill="#333" />
+            <!-- Airplane window view -->
+            <ellipse cx="320" cy="120" rx="70" ry="45" fill="#d0e8f8" stroke="#a0c0dc" stroke-width="1.5" />
+            <!-- Plane silhouette inside -->
+            <path d="M280 120 L350 120 L360 115 L350 110 L280 110 Z" fill="#4a7ab5" opacity=".6" />
+            <path d="M305 110 L315 95 L320 95 L315 110 Z" fill="#4a7ab5" opacity=".6" />
+            <path d="M305 120 L315 135 L320 135 L315 120 Z" fill="#4a7ab5" opacity=".6" />
+            <text x="320" y="155" font-size="8" fill="#4a7ab5" text-anchor="middle" font-family="monospace">KTM →
+              PVG</text>
+          </svg>
+        </div>
+        <div class="gal-overlay">
+          <div class="gal-cat">Air Freight</div>
+          <div class="gal-title">Air Cargo Terminal — Tribhuvan International</div>
+          <div class="gal-sub">100+ air shipments via 6 airline partners</div>
+        </div>
+        <div class="gal-caption">
+          <div class="gal-cat">Air Freight</div>
+          <div class="gal-title">Air Cargo Terminal</div>
+          <div class="gal-sub">Express, pharma & general cargo · KTM </div>
+        </div>
+      </div>
+
+      <!-- 03 — Hydropower turbine project cargo -->
+      <div class="gal-item reveal d2" data-cat="project" data-index="2">
+        <div class="gal-thumb">
+          <img src="turbine_denish_acharya.jpeg" alt="hydropower" width="450px" height="250px"">
+        </div>
+        <div class=" gal-overlay">
+          <div class="gal-cat">Project Cargo</div>
+          <div class="gal-title">Hydropower Turbine Transport</div>
+          <div class="gal-sub">Turbine — OOG heavy lift logistics</div>
+        </div>
+        <div class="gal-caption">
+          <div class="gal-cat">Project Cargo</div>
+          <div class="gal-title">Hydropower Turbine Transport</div>
+          <div class="gal-sub">OOG · Turbine · Heavy lift</div>
+        </div>
+      </div>
+
+      <!-- 05 — Solar panels project cargo (tall card) -->
+      <div class="gal-item reveal d1" data-cat="project" data-index="4">
+        <div class="gal-thumb">
+          <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="360" fill="#d8e8d0" />
+            <!-- Sky -->
+            <rect width="400" height="120" fill="#b8d0e8" />
+            <!-- Sun -->
+            <circle cx="340" cy="55" r="30" fill="#f7dc6f" opacity=".9" />
+            <circle cx="340" cy="55" r="22" fill="#f9e86d" />
+            <!-- Ground -->
+            <rect y="280" width="400" height="80" fill="#c8b898" />
+            <!-- Solar panel field — perspective -->
+            <!-- Row 1 (far) -->
+            <rect x="30" y="160" width="70" height="42" fill="#1a5276" rx="1" />
+            <line x1="30" y1="174" x2="100" y2="174" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="30" y1="188" x2="100" y2="188" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="52" y1="160" x2="52" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="76" y1="160" x2="76" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <rect x="115" y="160" width="70" height="42" fill="#1a5276" rx="1" />
+            <line x1="115" y1="174" x2="185" y2="174" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="115" y1="188" x2="185" y2="188" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="137" y1="160" x2="137" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="161" y1="160" x2="161" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <rect x="200" y="160" width="70" height="42" fill="#1a5276" rx="1" />
+            <line x1="200" y1="174" x2="270" y2="174" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="200" y1="188" x2="270" y2="188" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="222" y1="160" x2="222" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="246" y1="160" x2="246" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <rect x="285" y="160" width="70" height="42" fill="#1a5276" rx="1" />
+            <line x1="285" y1="174" x2="355" y2="174" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="285" y1="188" x2="355" y2="188" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="307" y1="160" x2="307" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <line x1="331" y1="160" x2="331" y2="202" stroke="#2980b9" stroke-width="0.5" />
+            <!-- Row 2 (near) -->
+            <rect x="10" y="218" width="90" height="55" fill="#154360" rx="1" />
+            <line x1="10" y1="236" x2="100" y2="236" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="10" y1="254" x2="100" y2="254" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="40" y1="218" x2="40" y2="273" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="70" y1="218" x2="70" y2="273" stroke="#2e86c1" stroke-width="0.7" />
+            <rect x="115" y="218" width="90" height="55" fill="#154360" rx="1" />
+            <line x1="115" y1="236" x2="205" y2="236" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="115" y1="254" x2="205" y2="254" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="145" y1="218" x2="145" y2="273" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="175" y1="218" x2="175" y2="273" stroke="#2e86c1" stroke-width="0.7" />
+            <rect x="220" y="218" width="90" height="55" fill="#154360" rx="1" />
+            <line x1="220" y1="236" x2="310" y2="236" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="220" y1="254" x2="310" y2="254" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="250" y1="218" x2="250" y2="273" stroke="#2e86c1" stroke-width="0.7" />
+            <line x1="280" y1="218" x2="280" y2="273" stroke="#2e86c1" stroke-width="0.7" />
+            <rect x="325" y="218" width="60" height="55" fill="#154360" rx="1" />
+            <!-- Crates with panels on ground -->
+            <rect x="50" y="295" width="60" height="25" fill="#8B6914" rx="1" />
+            <line x1="65" y1="295" x2="65" y2="320" stroke="rgba(255,255,255,.3)" stroke-width="0.7" />
+            <line x1="80" y1="295" x2="80" y2="320" stroke="rgba(255,255,255,.3)" stroke-width="0.7" />
+            <line x1="95" y1="295" x2="95" y2="320" stroke="rgba(255,255,255,.3)" stroke-width="0.7" />
+            <rect x="130" y="295" width="80" height="25" fill="#7B5914" rx="1" />
+            <text x="170" y="311" font-size="7" fill="rgba(255,255,255,.7)" text-anchor="middle"
+              font-family="monospace">20MW SOLAR</text>
+          </svg>
+        </div>
+        <div class="gal-overlay">
+          <div class="gal-cat">Project Cargo</div>
+          <div class="gal-title">20 MW Solar Farm — Panel Delivery</div>
+          <div class="gal-sub">4,000+ solar panels, inverters & mounting structures</div>
+        </div>
+        <div class="gal-caption">
+          <div class="gal-cat">Project Cargo</div>
+          <div class="gal-title">20 MW Solar Farm Delivery</div>
+          <div class="gal-sub">4,000+ panels · Inverters · Mounting structures</div>
+        </div>
+      </div>
+
+
+      <!-- 07 — Tech / ML project -->
+      <div class="gal-item reveal" data-cat="tech" data-index="6">
+        <div class="gal-thumb">
+          <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="240" fill="#1a1a2e" />
+            <!-- Monitor frame -->
+            <rect x="40" y="20" width="320" height="180" fill="#16213e" rx="4" stroke="#3b7dd8" stroke-width="1.5" />
+            <rect x="50" y="30" width="300" height="160" fill="#0f1b35" rx="2" />
+            <!-- Code lines -->
+            <rect x="60" y="42" width="60" height="5" fill="#3b7dd8" rx="1" />
+            <rect x="128" y="42" width="40" height="5" fill="#e67e22" rx="1" />
+            <rect x="176" y="42" width="80" height="5" fill="#2ecc71" rx="1" />
+            <rect x="70" y="54" width="100" height="4" fill="#4a90d9" opacity=".6" rx="1" />
+            <rect x="178" y="54" width="50" height="4" fill="#e74c3c" opacity=".7" rx="1" />
+            <rect x="60" y="66" width="80" height="4" fill="#9b59b6" rx="1" />
+            <rect x="148" y="66" width="120" height="4" fill="#4a90d9" opacity=".5" rx="1" />
+            <!-- Chart/graph area -->
+            <rect x="55" y="90" width="290" height="90" fill="#0d1729" rx="2" />
+            <!-- Stock line chart -->
+            <polyline
+              points="70,165 90,155 115,160 135,145 155,148 175,138 195,142 215,130 235,128 255,118 275,122 295,110 320,108 335,102"
+              stroke="#3b7dd8" stroke-width="2" fill="none" />
+            <polyline
+              points="70,165 90,162 115,168 135,158 155,162 175,155 195,160 215,152 235,150 255,143 275,148 295,138 320,136 335,132"
+              stroke="#e67e22" stroke-width="1.5" fill="none" opacity=".7" />
+            <!-- Y-axis labels -->
+            <text x="63" y="103" font-size="6" fill="#4a90d9" font-family="monospace">HIGH</text>
+            <text x="63" y="170" font-size="6" fill="#4a90d9" font-family="monospace">LOW</text>
+            <!-- Legend -->
+            <rect x="200" y="178" width="8" height="3" fill="#3b7dd8" rx="1" />
+            <text x="212" y="181" font-size="6" fill="#aaa" font-family="monospace">PREDICTION</text>
+            <rect x="260" y="178" width="8" height="3" fill="#e67e22" rx="1" />
+            <text x="272" y="181" font-size="6" fill="#aaa" font-family="monospace">ACTUAL</text>
+            <!-- Status bar -->
+            <rect x="50" y="192" width="300" height="12" fill="#0a1628" rx="1" />
+            <text x="60" y="200" font-size="6" fill="#3b7dd8" font-family="monospace">MODEL: LSTM_v2 · ACCURACY: 87.4% ·
+              EPOCHS: 250</text>
+            <!-- Stand -->
+            <rect x="185" y="200" width="30" height="10" fill="#16213e" rx="1" />
+            <rect x="160" y="210" width="80" height="6" fill="#0d1729" rx="2" />
+          </svg>
+        </div>
+        <div class="gal-overlay">
+          <div class="gal-cat">Tech & IT</div>
+          <div class="gal-title">Stock Price Prediction — Deep Learning</div>
+          <div class="gal-sub">LSTM neural network · Python · 87.4% accuracy</div>
+        </div>
+        <div class="gal-caption">
+          <div class="gal-cat">Tech & IT</div>
+          <div class="gal-title">Stock Price Prediction Model</div>
+          <div class="gal-sub">Deep Learning · LSTM · Python · Neural Networks</div>
+        </div>
+      </div>
+
+      <!-- 08 — Air freight manifest -->
+      <div class="gal-item reveal d1" data-cat="docs" data-index="7">
+        <div class="gal-thumb">
+          <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="260" fill="#eef4f8" />
+            <!-- AWB document -->
+            <rect x="50" y="15" width="300" height="220" fill="#fff" rx="3" stroke="#c8d8e8" stroke-width="1" />
+            <!-- Header -->
+            <rect x="50" y="15" width="300" height="40" fill="#1a3a6c" rx="3" />
+            <rect x="50" y="43" width="300" height="12" fill="#1a3a6c" />
+            <text x="200" y="39" font-size="9" fill="#fff" text-anchor="middle" font-family="serif"
+              font-weight="bold">AIR WAYBILL</text>
+            <text x="200" y="50" font-size="6.5" fill="rgba(255,255,255,.7)" text-anchor="middle"
+              font-family="monospace">INTERNATIONAL AIR TRANSPORT ASSOCIATION</text>
+            <!-- Airline logo area -->
+            <rect x="60" y="64" width="60" height="18" fill="#4a90d9" rx="2" />
+            <text x="90" y="76" font-size="7" fill="#fff" text-anchor="middle" font-family="monospace">AIR CHINA</text>
+            <!-- AWB number -->
+            <text x="200" y="75" font-size="8" fill="#1a3a6c" text-anchor="middle" font-family="monospace">AWB#
+              999-12345678</text>
+            <!-- Route -->
+            <text x="200" y="96" font-size="18" fill="#3b7dd8" text-anchor="middle" font-family="serif"
+              font-weight="bold">KTM → PVG</text>
+            <text x="130" y="105" font-size="7" fill="#666" text-anchor="middle"
+              font-family="monospace">KATHMANDU</text>
+            <text x="270" y="105" font-size="7" fill="#666" text-anchor="middle" font-family="monospace">SHANGHAI
+              PUDONG</text>
+            <line x1="155" y1="100" x2="245" y2="100" stroke="#3b7dd8" stroke-width="1.5" />
+            <polygon points="245,97 250,100 245,103" fill="#3b7dd8" />
+            <!-- Fields grid -->
+            <line x1="60" y1="115" x2="340" y2="115" stroke="#e0e8f0" stroke-width="1" />
+            <rect x="60" y="120" width="130" height="10" fill="#f0f5f8" rx="1" />
+            <rect x="200" y="120" width="130" height="10" fill="#f0f5f8" rx="1" />
+            <rect x="60" y="136" width="100" height="8" fill="#e8eef5" rx="1" />
+            <rect x="200" y="136" width="80" height="8" fill="#e8eef5" rx="1" />
+            <rect x="60" y="150" width="85" height="8" fill="#e8eef5" rx="1" />
+            <rect x="200" y="150" width="90" height="8" fill="#e8eef5" rx="1" />
+            <!-- Commodity box -->
+            <rect x="60" y="165" width="270" height="35" fill="#f5f8fc" rx="2" stroke="#c8d8e8" stroke-width="0.5" />
+            <text x="75" y="177" font-size="7" fill="#1a3a6c" font-family="monospace">COMMODITY: COSMETICS / PERSONAL
+              CARE</text>
+            <text x="75" y="190" font-size="7" fill="#555" font-family="monospace">PACKING: CARTONS · PCS: 120 · GW:
+              480KG</text>
+            <!-- Stamps -->
+            <rect x="260" y="200" width="70" height="20" fill="#fff" rx="2" stroke="#e74c3c" stroke-width="1.5" />
+            <text x="295" y="213" font-size="7" fill="#e74c3c" text-anchor="middle" font-family="monospace"
+              font-weight="bold">CLEARED</text>
+          </svg>
+        </div>
+        <div class="gal-overlay">
+          <div class="gal-cat">Documentation</div>
+          <div class="gal-title">Air Waybill — KTM to PVG</div>
+          <div class="gal-sub">International air freight documentation & customs clearance</div>
+        </div>
+        <div class="gal-caption">
+          <div class="gal-cat">Documentation</div>
+          <div class="gal-title">Air Waybill — KTM → PVG</div>
+          <div class="gal-sub">IATA AWB · Customs clearance · Air China</div>
+        </div>
+      </div>
+
+      <!-- 09 — Hotel recommendation ML -->
+      <div class="gal-item reveal d2" data-cat="tech" data-index="8">
+        <div class="gal-thumb">
+          <img src="recommendation1.jpeg" alt="hotel recommendation" width="450px" height="250px">
+        </div>
+        <div class="gal-overlay">
+          <div class="gal-cat">Tech & IT</div>
+          <div class="gal-title">Hotel Recommendation System</div>
+          <div class="gal-sub">ML-powered · Collaborative filtering · Python</div>
+        </div>
+        <div class="gal-caption">
+          <div class="gal-cat">Tech & IT</div>
+          <div class="gal-title">Hotel Recommendation System</div>
+          <div class="gal-sub">Machine Learning · Python · Recommendation Engine</div>
+        </div>
+      </div>
+
+
+    </div><!-- end gal-grid -->
+
+
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <span class="stag reveal">10 — Contact</span>
+    <h2 class="stitle reveal">Let's <em>connect</em></h2>
+
+    <div class="clayout">
+
+      <!-- ── Left: info panel ── -->
+      <div class="cinfo">
+        <p class="reveal">Whether you're looking for a logistics professional, want to discuss a freight project, or
+          simply want to connect — I'm always open to a conversation.</p>
+
+        <div class="cdet reveal">
+          <span class="cico">📍</span>
+          <div>
+            <div
+              style="font-size:.72rem;color:var(--muted);margin-bottom:2px;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;">
+              Location</div>
+            <span style="color:#1a1a1a;font-weight:400;">Kathmandu, Nepal</span>
+          </div>
+        </div>
+
+        <div class="cdet reveal d1">
+          <span class="cico">📞</span>
+          <div>
+            <div
+              style="font-size:.72rem;color:var(--muted);margin-bottom:2px;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;">
+              Phone / WhatsApp</div>
+            <a href="tel:+9779867562530" style="color:#1a1a1a;font-weight:400;">+977 9867562530</a>
+          </div>
+        </div>
+
+        <div class="cdet reveal d2">
+          <span class="cico">✉</span>
+          <div>
+            <div
+              style="font-size:.72rem;color:var(--muted);margin-bottom:2px;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;">
+              Email</div>
+            <a href="mailto:acharyadenish3@gmail.com"
+              style="color:#1a1a1a;font-weight:400;">acharyadenish3@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="cdet reveal d3">
+          <span class="cico">🌐</span>
+          <div>
+            <div
+              style="font-size:.72rem;color:var(--muted);margin-bottom:2px;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;">
+              Website</div>
+            <a href="https://denishacharya.com.np" target="_blank"
+              style="color:#1a1a1a;font-weight:400;">denishacharya.com.np</a>
+          </div>
+        </div>
+
+        <div class="cdet reveal">
+          <span class="cico">🔗</span>
+          <div>
+            <div
+              style="font-size:.72rem;color:var(--muted);margin-bottom:2px;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;">
+              LinkedIn</div>
+            <a href="#" target="_blank" style="color:#1a1a1a;font-weight:400;">View Profile</a>
+          </div>
+        </div>
+
+        <!-- Quick-reach buttons -->
+        <div class="reveal" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;">
+          <a href="mailto:acharyadenish3@gmail.com" class="btn-p" style="font-size:.65rem;padding:10px 22px;">✉
+            &nbsp;Email Me</a>
+          <a href="https://wa.me/9779867562530?text=Hi%20Denish%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+            target="_blank"
+            style="display:inline-block;padding:10px 22px;background:#25d366;color:#fff;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;border-radius:2px;text-decoration:none;border:1px solid #25d366;transition:background .3s;">💬
+            &nbsp;WhatsApp</a>
+        </div>
+
+        <!-- Response time -->
+        <div class="resp-badge reveal d1">
+          <span style="font-size:1.1rem;">⚡</span>
+          <div>
+            <div class="resp-badge-text" style="color:#1a1a1a;font-weight:500;">Typically replies within 2–4 hours</div>
+            <div class="resp-badge-sub">Nepal Standard Time (NPT, UTC+5:45)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Right: form ── -->
+      <div class="reveal d1">
+
+        <!-- ✅ Thank-you screen (hidden until successful submit) -->
+        <div id="formSuccess"
+          style="display:none; padding:52px 36px; text-align:center; background:#ffffff; border:1px solid rgba(0,0,0,0.08); border-radius:6px; box-shadow:0 4px 32px rgba(0,0,0,0.06);">
+
+          <!-- Animated checkmark ring -->
+          <div
+            style="width:72px;height:72px;border-radius:50%;background:rgba(25,112,233,0.08);border:2px solid rgba(25,112,233,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2rem;">
+            ✅
+          </div>
+
+          <div
+            style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:4px;text-transform:uppercase;color:#1970e9;margin-bottom:12px;">
+            Message Received
+          </div>
+
+          <div
+            style="font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:#1a1a1a;line-height:1.15;margin-bottom:14px;">
+            Thank you for<br><em style="color:#1970e9;">reaching out!</em>
+          </div>
+
+          <p style="font-size:.9rem;color:#555;max-width:340px;margin:0 auto 10px;line-height:1.8;">
+            Your message has been sent to Denish Acharya. You'll receive a reply at your email address within <strong
+              style="color:#1a1a1a;">2–4 hours</strong>.
+          </p>
+
+          <p style="font-size:.8rem;color:#999;margin-bottom:32px;">
+            Nepal Standard Time · Mon–Sat, 9 AM – 7 PM
+          </p>
+
+          <!-- Divider -->
+          <div style="width:40px;height:2px;background:#1970e9;margin:0 auto 28px;border-radius:2px;"></div>
+
+          <!-- Quick actions -->
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;">
+            <a href="https://wa.me/9779867562530" target="_blank"
+              style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:#25d366;color:#fff;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;border-radius:2px;text-decoration:none;font-family:'Jost',sans-serif;">
+              💬 &nbsp;WhatsApp Chat
+            </a>
+            <a href="mailto:acharyadenish3@gmail.com"
+              style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border:1px solid rgba(0,0,0,0.12);color:#1a1a1a;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:400;border-radius:2px;text-decoration:none;font-family:'Jost',sans-serif;">
+              ✉ &nbsp;Send Email
+            </a>
+          </div>
+
+          <button onclick="resetContactForm()"
+            style="background:none;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:2px;text-transform:uppercase;color:#aaa;padding:6px 0;text-decoration:underline;text-underline-offset:3px;">
+            ← Send Another Message
+          </button>
+        </div>
+
+        <!-- Error banner (hidden by default) -->
+        <div id="formErrorBanner">
+          ⚠️ &nbsp;Something went wrong. Please try again or email directly at
+          <a href="mailto:acharyadenish3@gmail.com">acharyadenish3@gmail.com</a>
+        </div>
+
+        <!-- Contact form -->
+        <form id="contactForm" novalidate>
+
+          <input type="hidden" name="access_key" value="2b48c9a4-a652-4021-98a4-90e6e46cdcb9">
+          <input type="hidden" name="from_name" value="Portfolio Contact Form">
+          <input type="hidden" name="subject" id="hiddenSubject" value="New Portfolio Enquiry — Denish Acharya">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+          <div class="frow">
+            <div class="fg">
+              <label for="cf_name">Full Name</label>
+              <input type="text" id="cf_name" name="name" placeholder="Your full name" autocomplete="name">
+              <div class="ferr" id="err_name"></div>
+            </div>
+            <div class="fg">
+              <label for="cf_email">Email Address</label>
+              <input type="email" id="cf_email" name="email" placeholder="your@email.com" autocomplete="email">
+              <div class="ferr" id="err_email"></div>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="cf_phone">Phone / WhatsApp <span
+                style="color:#aaa;font-weight:300;letter-spacing:0;">(optional)</span></label>
+            <input type="tel" id="cf_phone" name="phone" placeholder="+977 98XXXXXXXX" autocomplete="tel">
+          </div>
+
+          <div class="fg">
+            <label for="cf_type">Enquiry Type</label>
+            <select id="cf_type" name="enquiry_type">
+              <option value="" disabled selected>Select enquiry type…</option>
+              <option value="Ocean Freight">🚢 &nbsp;Ocean Freight</option>
+              <option value="Air Freight">✈ &nbsp;Air Freight</option>
+              <option value="Project Cargo">⚙ &nbsp;Project Cargo</option>
+              <option value="Road Freight">🚛 &nbsp;Road Freight</option>
+              <option value="Documentation & Customs">📋 &nbsp;Documentation &amp; Customs</option>
+              <option value="Job / Collaboration">🤝 &nbsp;Job / Collaboration</option>
+              <option value="General Enquiry">💬 &nbsp;General Enquiry</option>
+            </select>
+            <div class="ferr" id="err_type"></div>
+          </div>
+
+          <div class="fg">
+            <label for="cf_msg">Message</label>
+            <textarea id="cf_msg" name="message"
+              placeholder="Tell me about your cargo, route, timeline, or anything you'd like to discuss…"></textarea>
+            <div style="display:flex;justify-content:flex-end;margin-top:5px;">
+              <span id="charCount" style="font-size:.68rem;color:#aaa;font-family:'DM Mono',monospace;">0 / 1000</span>
+            </div>
+            <div class="ferr" id="err_msg"></div>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+            <button type="submit" id="submitBtn" class="btn-p" style="min-width:170px;">
+              <span id="btnText">Send Message →</span>
+              <span id="btnLoader" style="display:none;">⏳ &nbsp;Sending…</span>
+            </button>
+            <span style="font-size:.72rem;color:#aaa;">🔒 Your info is private &amp; never shared</span>
+          </div>
+        </form>
+
+      </div><!-- end right col -->
+    </div><!-- end clayout -->
+  </section>
+
+  <footer>
+    <div class="flogo">Denish <span>Acharya</span></div>
+    <div class="fcopy">© 2026 · Team Global Logistics Pvt Ltd · Kathmandu</div>
+    <div class="fsoc">
+      <a href="https://www.facebook.com/daynis.acharya" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/daynisacharya/" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    /* ── CURSOR ── */
+    const cur = document.getElementById('cur'), ring = document.getElementById('ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+    });
+    (function loop() {
+      rx += (mx - rx) * .1; ry += (my - ry) * .1;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(loop);
+    })();
+
+    /* ── NAV SCROLL ── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
+    });
+
+    /* ── REVEAL ON SCROLL ── */
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(x => { if (x.isIntersecting) x.target.classList.add('v'); }),
+      { threshold: .1 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    /* ── SMOOTH SCROLL ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    /* ── GALLERY FILTERS ── */
+    document.querySelectorAll('.gal-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.gal-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('.gal-item').forEach(item => {
+          item.classList.toggle('hidden', f !== 'all' && item.dataset.cat !== f);
+        });
+      });
+    });
+
+    /* ── CHAR COUNTER ── */
+    const msgEl = document.getElementById('cf_msg');
+    const ccEl = document.getElementById('charCount');
+    if (msgEl) {
+      msgEl.addEventListener('input', () => {
+        const n = Math.min(msgEl.value.length, 1000);
+        if (msgEl.value.length > 1000) msgEl.value = msgEl.value.slice(0, 1000);
+        ccEl.textContent = n + ' / 1000';
+        ccEl.style.color = n > 900 ? '#c0392b' : '#aaa';
+      });
+    }
+
+    /* ── VALIDATION ── */
+    const rules = [
+      {
+        id: 'cf_name', err: 'err_name',
+        check: v => v.trim().length >= 2,
+        msg: 'Please enter your name (at least 2 characters)'
+      },
+      {
+        id: 'cf_email', err: 'err_email',
+        check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+        msg: 'Please enter a valid email address'
+      },
+      {
+        id: 'cf_type', err: 'err_type',
+        check: v => v !== '',
+        msg: 'Please select an enquiry type'
+      },
+      {
+        id: 'cf_msg', err: 'err_msg',
+        check: v => v.trim().length >= 10,
+        msg: 'Please write at least 10 characters'
+      }
+    ];
+
+    function validateForm() {
+      let ok = true;
+      rules.forEach(r => {
+        const el = document.getElementById(r.id);
+        const err = document.getElementById(r.err);
+        if (!r.check(el.value)) {
+          el.classList.add('invalid'); el.classList.remove('valid');
+          err.textContent = r.msg;
+          ok = false;
+        } else {
+          el.classList.remove('invalid'); el.classList.add('valid');
+          err.textContent = '';
+        }
+      });
+      return ok;
+    }
+
+    /* Clear errors as user types */
+    ['cf_name', 'cf_email', 'cf_phone', 'cf_type', 'cf_msg'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('input', () => {
+        el.classList.remove('invalid');
+        const errKey = id.replace('cf_', 'err_');
+        const errEl = document.getElementById(errKey);
+        if (errEl) errEl.textContent = '';
+      });
+    });
+
+    /* ── FORM SUBMIT — Web3Forms API ── */
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      document.getElementById('formErrorBanner').style.display = 'none';
+
+      if (!validateForm()) {
+        /* Scroll to first error */
+        const firstInvalid = this.querySelector('.invalid');
+        if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      /* Update hidden subject with selected enquiry type */
+      const sel = document.getElementById('cf_type');
+      const selText = sel.options[sel.selectedIndex].text.replace(/^[^\s]+\s+/, '');
+      document.getElementById('hiddenSubject').value =
+        selText + ' — Denish Acharya Portfolio';
+
+      /* Show loading state */
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      document.getElementById('btnText').style.display = 'none';
+      document.getElementById('btnLoader').style.display = 'inline';
+
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(this)
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          /* Show success, hide form */
+          this.style.display = 'none';
+          const success = document.getElementById('formSuccess');
+          success.style.display = 'block';
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      } catch (err) {
+        /* Show error banner, re-enable button */
+        document.getElementById('formErrorBanner').style.display = 'block';
+        document.getElementById('formErrorBanner').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        btn.disabled = false;
+        document.getElementById('btnText').style.display = 'inline';
+        document.getElementById('btnLoader').style.display = 'none';
+      }
+    });
+
+    /* ── RESET FORM ── */
+    function resetContactForm() {
+      const form = document.getElementById('contactForm');
+      form.reset();
+      form.style.display = 'block';
+      document.getElementById('formSuccess').style.display = 'none';
+      document.getElementById('formErrorBanner').style.display = 'none';
+      document.getElementById('submitBtn').disabled = false;
+      document.getElementById('btnText').style.display = 'inline';
+      document.getElementById('btnLoader').style.display = 'none';
+      ccEl.textContent = '0 / 1000';
+      ccEl.style.color = '#aaa';
+      ['cf_name', 'cf_email', 'cf_phone', 'cf_type', 'cf_msg'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('valid', 'invalid');
+      });
+    }
+  </script>
+</body>
+
+</html>
