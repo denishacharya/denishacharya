@@ -238,13 +238,7 @@
     }
 
     /* Animated lines */
-    .rl {
-      position: absolute;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--blue-line), transparent);
-      opacity: 0;
-      animation: rf 8s ease-in-out infinite;
-    }
+ 
 
     .rl:nth-child(1) {
       top: 28%;
@@ -290,6 +284,7 @@
       margin-bottom: 20px;
       opacity: 0;
       animation: fu .8s .3s ease forwards;
+      text-decoration: none;
     }
 
     .hero-name {
@@ -2011,7 +2006,11 @@
     <div class="rl"></div>
     <div class="rl"></div>
     <div class="hero-photo"><img src="denish1.jpeg" alt="Denish Acharya"></div>
-    <div class="hero-eyebrow"><a href="https://teamglobal.com.np/" target="_blank" >Team Global Logistics &nbsp;·&nbsp; Kathmandu, Nepal</a></div>
+    <div class="hero-eyebrow">
+  <a href="https://teamglobal.com.np/" target="_blank" style="text-decoration: none;">
+    Team Global Logistics &nbsp;·&nbsp; Kathmandu, Nepal
+  </a>
+</div>
     <h1 class="hero-name">Denish<br><em>Acharya</em></h1>
     <p class="hero-desc">International freight &amp; logistics professional with 1.5+ years of experience — 500+
       containers, ocean &amp; air cargo, project cargo, and multi-corridor trade across Asia.</p>
